@@ -29,4 +29,7 @@ app.put("/api/foods/:id", foodController.updateFood);
 app.delete("/api/foods/:id", foodController.deleteFood);
 
 // Start the server
+app.get("/", (req, res) => {
+  res.send("Hello From Koushik's Food API");
+});
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
