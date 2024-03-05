@@ -4,8 +4,8 @@ const Food = require("./foodModel");
 exports.createFood = async (req, res) => {
   try {
     const food = new Food(req.body);
-    //await food.save();
-    food.save();
+    await food.save();
+    //food.save();
     res.status(201).json(food);
   } catch (err) {
     res.status(400).json({ message: err.message });
@@ -54,7 +54,7 @@ exports.updateFood = async (req, res) => {
 exports.deleteFood = async (req, res) => {
   try {
     //await Food.findByIdAndDelete(req.params.id);
-    await Food.findByIdAndDelete(req.params.id);
+    Food.findByIdAndDelete(req.params.id);
     res.json({ message: "Food deleted" });
   } catch (err) {
     res.status(500).json({ message: err.message });
