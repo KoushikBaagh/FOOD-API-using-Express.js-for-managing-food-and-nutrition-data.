@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 mongoose
   // .connect(
-  //   "mongodb+srv://koushik:<Koushik123456789Koushik>@food-api-cluster.rsmirkc.mongodb.net/?retryWrites=true&w=majority&appName=Food-API-Cluster"
+  //   "mongodb+srv://koushik:123456789@food-api-cluster.rsmirkc.mongodb.net/?retryWrites=true&w=majority&appName=Food-API-Cluster"
   // )
   .connect("mongodb://localhost:27017/foodDB")
   //
