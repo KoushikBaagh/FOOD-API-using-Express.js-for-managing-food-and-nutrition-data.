@@ -17,7 +17,11 @@ app.use(bodyParser.json());
 
 // Connect to MongoDB
 mongoose
-  .connect("mongodb://localhost:27017/foodDB")
+  // .connect("mongodb://localhost:27017/foodDB")
+  .connect(
+    "mongodb+srv://koushik:<Koushik123456789Koushik>@food-api-cluster.rsmirkc.mongodb.net/?retryWrites=true&w=majority&appName=Food-API-Cluster",
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  )
   .then(() => console.log("MongoDB Connected"))
   .catch((err) => console.log(err));
 
